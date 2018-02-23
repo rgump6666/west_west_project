@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10px">
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header"/>
+
+    <include
+        android:id="@+id/adv_bar"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:layout_below="@+id/header"
+        layout="@layout/adv_bar"/>
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adv_bar"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_menu_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="預約"/>
+        <Button
+            android:id="@+id/btn_menu_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="我的行程"/>
+        <Button
+            android:id="@+id/btn_menu_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="會員優惠"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_1"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_menu_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="體育消息"/>
+        <Button
+            android:id="@+id/btn_menu_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="購票"/>
+        <Button
+            android:id="@+id/btn_menu_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="關於我們"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/app_background"
+        android:layout_below="@id/linear_2"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"/>
+
+</RelativeLayout>

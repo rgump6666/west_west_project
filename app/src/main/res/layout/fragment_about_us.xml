@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10px">
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header"/>
+
+    <TextView
+        android:id="@+id/tv_title_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:textSize="50px"
+        android:text="關於我們"/>
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title_2"
+        android:textSize="50px"
+        android:padding="50px"
+        android:background="#6495ED"
+        android:textColor="#ffffff"
+        android:text="去評分"/>
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_1"
+        android:textSize="50px"
+        android:padding="50px"
+        android:text="常見問題"/>
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_2"
+        android:textSize="50px"
+        android:padding="50px"
+        android:background="#6495ED"
+        android:textColor="#ffffff"
+        android:text="服務政策及說明"/>
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_3"
+        android:textSize="50px"
+        android:padding="50px"
+        android:text="意見反饌"/>
+
+    <TextView
+        android:id="@+id/tv_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_4"
+        android:textSize="50px"
+        android:padding="50px"
+        android:background="#6495ED"
+        android:textColor="#ffffff"
+        android:text="聯繫我們"/>
+
+
+</RelativeLayout>

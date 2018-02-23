@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10px">
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header"/>
+
+    <TextView
+        android:id="@+id/tv_title_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:textSize="50px"
+        android:text="預約"/>
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title_2"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_menu_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="中西區"/>
+        <Button
+            android:id="@+id/btn_menu_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="灣仔區"/>
+        <Button
+            android:id="@+id/btn_menu_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="東區"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_1"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_menu_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="南區"/>
+        <Button
+            android:id="@+id/btn_menu_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="油尖旺區"/>
+        <Button
+            android:id="@+id/btn_menu_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="深水埗區"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_2"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_menu_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="九龍城區"/>
+        <Button
+            android:id="@+id/btn_menu_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="黃大仙區"/>
+        <Button
+            android:id="@+id/btn_menu_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="觀塘區"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_3"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_menu_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="葵青區"/>
+        <Button
+            android:id="@+id/btn_menu_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="荃灣區"/>
+        <Button
+            android:id="@+id/btn_menu_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="屯門區"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_4"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_menu_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="元朗區"/>
+        <Button
+            android:id="@+id/btn_menu_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="北區"/>
+        <Button
+            android:id="@+id/btn_menu_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="大埔區"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_5"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_menu_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="沙田區"/>
+        <Button
+            android:id="@+id/btn_menu_17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="西貢區"/>
+        <Button
+            android:id="@+id/btn_menu_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="離島區"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

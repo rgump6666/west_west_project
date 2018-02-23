@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10px"
+    android:background="@mipmap/app_background">
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header"/>
+
+    <TextView
+        android:id="@+id/tv_title_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:textSize="50px"
+        android:text="我的行程"/>
+
+    <TextView
+        android:id="@+id/list_data_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title_2"
+        android:textColor="#ffffff"
+        android:textSize="50px"
+        android:background="#6495ED"
+        android:paddingHorizontal="50px"
+        android:paddingVertical="20px"
+        android:text="活動/時間/地點"/>
+
+    <ListView
+        android:id="@+id/list_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/list_data_header"
+        android:background="#ffffff"/>
+
+</RelativeLayout>

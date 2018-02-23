@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10px">
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header"/>
+
+    <TextView
+        android:id="@+id/tv_title_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:textSize="50px"
+        android:text="預約"/>
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title_2" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日期:" />
+
+        <EditText
+            android:id="@+id/ed_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_1"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_menu_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="0900-1030"/>
+        <Button
+            android:id="@+id/btn_menu_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="1030-1200"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_2"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_menu_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="1200-1330"/>
+        <Button
+            android:id="@+id/btn_menu_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="1330-1500"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_3"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_menu_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="1500-1630"/>
+        <Button
+            android:id="@+id/btn_menu_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="1630-1800"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_4"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_menu_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="1800-1930"/>
+        <Button
+            android:id="@+id/btn_menu_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="1930-2100"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_5"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_menu_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="2100-2230"/>
+        <Button
+            android:id="@+id/btn_menu_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
