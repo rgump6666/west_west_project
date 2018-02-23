@@ -62,6 +62,9 @@ public class ReservationData {
         //五人足球場
         reservation_layer3_array_3.put("10",new String[]{"中葵涌公園","長達路休憩處","楓樹窩村籃球場"});
         reservation_layer3_array_3.put("11",new String[]{"柴灣角遊樂場","海安路遊樂場","國瑞路公園"});
+        reservation_layer3_array_3.put("11",new String[]{"柴灣角遊樂場","海安路遊樂場","國瑞路公園"});
+        reservation_layer3_array_3.put("11",new String[]{"柴灣角遊樂場","海安路遊樂場","國瑞路公園"});
+        reservation_layer3_array_3.put("11",new String[]{"柴灣角遊樂場","海安路遊樂場","國瑞路公園"});
     }
 
     public Map<String, String> get_reservation_layer2_array(String array_name){
