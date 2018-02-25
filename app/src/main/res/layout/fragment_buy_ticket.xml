@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10px">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tv_title_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:textSize="50px"
+        android:text="購票"/>
+
+    <LinearLayout
+        android:id="@+id/linear_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title_2"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tv_ticket_type_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="100px"/>
+        <TextView
+            android:id="@+id/tv_ticket_type_1_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="100px"
+            android:text="0"/>
+        <TextView
+            android:id="@+id/tv_ticket_type_1_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#6495ED"
+            android:textColor="#ffffff"
+            android:textSize="100px"
+            android:paddingHorizontal="50px"
+            android:layout_marginLeft="20px"
+            android:text="+"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_1"
+        android:layout_marginTop="50px"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tv_ticket_type_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="100px"/>
+        <TextView
+            android:id="@+id/tv_ticket_type_2_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="100px"
+            android:text="0"/>
+        <TextView
+            android:id="@+id/tv_ticket_type_2_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#6495ED"
+            android:textColor="#ffffff"
+            android:textSize="100px"
+            android:paddingHorizontal="50px"
+            android:layout_marginLeft="20px"
+            android:text="+"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_2"
+        android:layout_marginTop="50px"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tv_ticket_type_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="100px"/>
+        <TextView
+            android:id="@+id/tv_ticket_type_3_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="100px"
+            android:text="0"/>
+        <TextView
+            android:id="@+id/tv_ticket_type_3_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#6495ED"
+            android:textColor="#ffffff"
+            android:textSize="100px"
+            android:paddingHorizontal="50px"
+            android:layout_marginLeft="20px"
+            android:text="+"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_3"
+        android:layout_marginTop="50px"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="購買"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

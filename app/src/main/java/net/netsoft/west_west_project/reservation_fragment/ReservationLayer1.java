@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import net.netsoft.west_west_project.R;
+import net.netsoft.west_west_project.data.ReservationData;
+import net.netsoft.west_west_project.data.StrokeData;
 
 /**
  * Created by HCKH on 22/2/18.
@@ -15,6 +17,7 @@ import net.netsoft.west_west_project.R;
 
 public class ReservationLayer1 extends FragmentActivity {
 
+    private StrokeData stroke_data;
     private ReservationData reservation_data = new ReservationData();
 
     private String reservation_type;
@@ -52,6 +55,7 @@ public class ReservationLayer1 extends FragmentActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ReservationLayer1.this, ReservationLayer2.class);
                 Bundle b = new Bundle();
+                b.putSerializable("stroke_data", stroke_data);
                 b.putString("reservation_type", reservation_type);
                 b.putString("reservation_layer1", "1");
                 intent.putExtras(b);
@@ -62,6 +66,7 @@ public class ReservationLayer1 extends FragmentActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ReservationLayer1.this, ReservationLayer2.class);
                 Bundle b = new Bundle();
+                b.putSerializable("stroke_data", stroke_data);
                 b.putString("reservation_type", reservation_type);
                 b.putString("reservation_layer1", "2");
                 intent.putExtras(b);
@@ -72,18 +77,22 @@ public class ReservationLayer1 extends FragmentActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(ReservationLayer1.this, ReservationLayer2.class);
                 Bundle b = new Bundle();
+                b.putSerializable("stroke_data", stroke_data);
                 b.putString("reservation_type", reservation_type);
                 b.putString("reservation_layer1", "3");
                 intent.putExtras(b);
                 startActivityForResult(intent, 0);
             }
         });
-        tv_title_2.setText(tv_title_2.getText()+reservation_data.reservation_type_array.get(reservation_type)+" - 地區");
+        tv_title_2.setText(tv_title_2.getText()+
+                " - "+reservation_data.reservation_type_array.get(reservation_type)+
+                " - 地區");
     }
 
     private void getPassedParameter(){
         Bundle b = getIntent().getExtras();
         if(b != null) {
+            stroke_data = (StrokeData) b.getSerializable("stroke_data");
             reservation_type = b.getString("reservation_type");
         }
     }
@@ -94,6 +103,7 @@ public class ReservationLayer1 extends FragmentActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == 1){
             Intent intent = new Intent();
+            intent.putExtra("stroke_data", data.getSerializableExtra("stroke_data"));
             setResult(resultCode,intent);
             finish();
         }

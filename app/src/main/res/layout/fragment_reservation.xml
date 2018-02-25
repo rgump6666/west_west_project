@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_title_2"
-        android:weightSum="2">
+        android:weightSum="3">
 
         <Button
             android:id="@+id/btn_menu_1"
@@ -33,7 +33,7 @@
             android:textColor="#ffffff"
             android:background="#6495ED"
             android:layout_margin="10px"
-            android:text="籃球"/>
+            android:text="籃球場"/>
         <Button
             android:id="@+id/btn_menu_2"
             android:layout_width="wrap_content"
@@ -42,7 +42,16 @@
             android:textColor="#ffffff"
             android:background="#6495ED"
             android:layout_margin="10px"
-            android:text="足球"/>
+            android:text="七人足球場"/>
+        <Button
+            android:id="@+id/btn_menu_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#6495ED"
+            android:layout_margin="10px"
+            android:text="五人足球場"/>
 
     </LinearLayout>
 

@@ -7,6 +7,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import net.netsoft.west_west_project.data.StrokeData;
+
 import java.util.ArrayList;
 
 /**
@@ -15,10 +17,12 @@ import java.util.ArrayList;
 
 public class MyStrokeFragment extends FragmentActivity {
 
+    private StrokeData stroke_data;
+
     Button btn_back;
 
     ListView list_data;
-    private ArrayList listItems = new ArrayList<String>();
+    private ArrayList listItems;
     private ArrayAdapter listAdapter;
 
     @Override
@@ -26,29 +30,17 @@ public class MyStrokeFragment extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_my_stroke);
 
+        stroke_data = (StrokeData) getIntent().getSerializableExtra("stroke_data");
+
         set_frontend_element();
 
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
-        listItems.add(0, "足球/2018年/3月2日/香港島,跑馬地,跑馬地足球場");
         listAdapter.notifyDataSetChanged();
     }
 
     private void set_frontend_element(){
         btn_back = (Button) findViewById(R.id.btn_back);
+
+        listItems = stroke_data.strokeData;
 
         list_data = (ListView) findViewById(R.id.list_data);
         listAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);

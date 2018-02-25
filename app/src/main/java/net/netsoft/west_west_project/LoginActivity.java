@@ -1,14 +1,14 @@
 package net.netsoft.west_west_project;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import net.netsoft.west_west_project.data.UserData;
 
 /**
  * Created by HCKH on 17/2/18.
@@ -16,11 +16,10 @@ import android.widget.TextView;
 
 public class LoginActivity extends FragmentActivity {
 
-    private String app_username;
-    private String default_username = "111";
+    private UserData user_data = new UserData();
 
-    private String app_password;
-    private String default_password = "222";
+    private String default_username = "admin";
+    private String default_password = "admin";
 
     Button btn_back;
     EditText ed_username;
@@ -66,10 +65,22 @@ public class LoginActivity extends FragmentActivity {
                 String input_password = ed_password.getText().toString();
 
                 if(!input_username.equals(null) && !input_password.equals(null)) {
-                    if (input_username.equals(app_username) || input_username.equals(default_username)) {
-                        if (input_password.equals(app_password) || input_password.equals(default_password)) {
+                    if (user_data.userData.get(input_username) != null || input_username.equals(default_username)) {
+
+                        boolean match_password = false;
+                        if(user_data.userData.get(input_username) != null) {
+                            if (user_data.userData.get(input_username)[1] != null) {
+                                System.out.println(user_data.userData.get(input_username)[0]);
+                                if (user_data.userData.get(input_username)[0].equals(input_password)) {
+                                    match_password = true;
+                                }
+                            }
+                        }
+
+                        if (match_password || input_password.equals(default_password)) {
                             can_login = true;
                         }
+
                     }
                 }
 

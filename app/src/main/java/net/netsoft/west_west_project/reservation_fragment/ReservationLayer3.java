@@ -1,24 +1,20 @@
 package net.netsoft.west_west_project.reservation_fragment;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import net.netsoft.west_west_project.MainActivity;
 import net.netsoft.west_west_project.R;
-import net.netsoft.west_west_project.ReservationFragment;
+import net.netsoft.west_west_project.data.ReservationData;
+import net.netsoft.west_west_project.data.StrokeData;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -27,6 +23,7 @@ import java.util.Map;
 
 public class ReservationLayer3 extends FragmentActivity {
 
+    private StrokeData stroke_data;
     private ReservationData reservation_data = new ReservationData();
 
     private String reservation_type;
@@ -66,7 +63,8 @@ public class ReservationLayer3 extends FragmentActivity {
 
         Map<String, String> reservation_layer2_array = reservation_data.get_reservation_layer2_array(reservation_layer1);
 
-        tv_title_2.setText(tv_title_2.getText()+reservation_data.reservation_type_array.get(reservation_type)+
+        tv_title_2.setText(tv_title_2.getText()+
+                " - "+reservation_data.reservation_type_array.get(reservation_type)+
                 " - "+reservation_data.reservation_layer1_array.get(reservation_layer1)+
                 " - "+reservation_layer2_array.get(reservation_layer2)+
                 " - 球場");
@@ -85,6 +83,7 @@ public class ReservationLayer3 extends FragmentActivity {
             public void onItemClick(AdapterView<?>adapter,View v, int position, long id){
                 Intent intent = new Intent(ReservationLayer3.this, ReservationLayer4.class);
                 Bundle b = new Bundle();
+                b.putSerializable("stroke_data", stroke_data);
                 b.putString("reservation_type", reservation_type);
                 b.putString("reservation_layer1", reservation_layer1);
                 b.putString("reservation_layer2", reservation_layer2);
@@ -98,6 +97,7 @@ public class ReservationLayer3 extends FragmentActivity {
     private void getPassedParameter(){
         Bundle b = getIntent().getExtras();
         if(b != null) {
+            stroke_data = (StrokeData) b.getSerializable("stroke_data");
             reservation_type = b.getString("reservation_type");
             reservation_layer1 = b.getString("reservation_layer1");
             reservation_layer2 = b.getString("reservation_layer2");
@@ -110,6 +110,7 @@ public class ReservationLayer3 extends FragmentActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == 1){
             Intent intent = new Intent();
+            intent.putExtra("stroke_data", data.getSerializableExtra("stroke_data"));
             setResult(resultCode,intent);
             finish();
         }

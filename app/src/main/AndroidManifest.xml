@@ -25,15 +25,15 @@
         <activity android:name=".AboutUsFragment"/>
         <activity android:name=".NewsFragment"/>
         <activity android:name=".DiscountFragment"/>
+        <activity android:name=".BuyTicketFragment"/>
+
+        <activity android:name=".BuyTicketLayer1"/>
 
         <activity android:name=".reservation_fragment.ReservationLayer1"/>
         <activity android:name=".reservation_fragment.ReservationLayer2"/>
         <activity android:name=".reservation_fragment.ReservationLayer3"/>
         <activity android:name=".reservation_fragment.ReservationLayer4"/>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        <activity android:name=".reservation_fragment.ReservationLayer5"/>
     </application>
 
 </manifest>

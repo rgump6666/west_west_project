@@ -4,6 +4,8 @@ package net.netsoft.west_west_project;
  * Created by HCKH on 21/2/18.
  */
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -47,7 +49,8 @@ public class AboutUsFragment extends FragmentActivity {
 
         tv_1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                finish();
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=cn.hktool.android.action"));
+                startActivity(browserIntent);
             }
         });
         tv_2.setOnClickListener(new View.OnClickListener() {

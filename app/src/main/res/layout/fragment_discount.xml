@@ -43,8 +43,7 @@
             android:layout_height="match_parent"
             android:textSize="50px"
             android:padding="20px"
-            android:text="Promotion 2"
-            android:background="#6495ED"
+            android:background="@mipmap/pomotion_2"
             android:textColor="#ffffff"
             android:layout_margin="10px"
             android:textAlignment="center"
@@ -53,12 +52,11 @@
         <Button
             android:id="@+id/btn_promotion_3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:textSize="50px"
             android:padding="20px"
-            android:background="#6495ED"
+            android:background="@mipmap/pomotion_3"
             android:textColor="#ffffff"
-            android:text="Promotion 3"
             android:layout_margin="10px"
             android:textAlignment="center"
             android:layout_weight="1"/>
@@ -76,12 +74,11 @@
         <Button
             android:id="@+id/btn_promotion_4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:textSize="50px"
             android:padding="20px"
-            android:text="Promotion 4"
             android:textColor="#ffffff"
-            android:background="#6495ED"
+            android:background="@mipmap/pomotion_4"
             android:layout_margin="10px"
             android:textAlignment="center"
             android:layout_weight="1"/>
@@ -89,12 +86,11 @@
         <Button
             android:id="@+id/btn_promotion_5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:textSize="50px"
             android:padding="20px"
-            android:background="#6495ED"
+            android:background="@mipmap/pomotion_5"
             android:textColor="#ffffff"
-            android:text="Promotion 5"
             android:layout_margin="10px"
             android:textAlignment="center"
             android:layout_weight="1"/>
@@ -102,7 +98,7 @@
         <Button
             android:id="@+id/btn_promotion_6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:textSize="50px"
             android:padding="20px"
             android:background="#6495ED"
@@ -110,7 +106,8 @@
             android:text="Promotion 6"
             android:layout_margin="10px"
             android:textAlignment="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:visibility="invisible"/>
 
     </LinearLayout>
 

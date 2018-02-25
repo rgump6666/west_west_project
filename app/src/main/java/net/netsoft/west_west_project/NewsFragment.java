@@ -20,26 +20,35 @@ public class NewsFragment extends FragmentActivity {
 
     Button btn_back;
     ListView list_data;
+    int news_num = 4;
 
     int[] news_image = new int[]{
-            R.mipmap.news_image_1, R.mipmap.news_image_1, R.mipmap.news_image_1, R.mipmap.news_image_1,
-            R.mipmap.news_image_1, R.mipmap.news_image_1, R.mipmap.news_image_1, R.mipmap.news_image_1,
+            R.mipmap.news_image_1,
+            -1,
+            R.mipmap.news_image_3,
+            R.mipmap.news_image_4
     };
 
     String[] news_title = new String[]{
-            "ListView Title 1", "ListView Title 2", "ListView Title 3", "ListView Title 4",
-            "ListView Title 5", "ListView Title 6", "ListView Title 7", "ListView Title 8",
+            "干地希望英超用VAR",
+            "曼城3：0爆「廠」捧聯賽盃",
+            "NIKE 5 土瓜灣分站結束 28隊勁旅殺入麥花臣",
+            "盧卡古做好戲 曼聯2：1拆車"
     };
 
 
     String[] news_time = new String[]{
-            "2018-01-01", "2018-02-02", "2018-03-03", "2018-04-04",
-            "2018-05-05", "2018-06-06", "2018-07-07", "2018-08-08"
+            "1小時前",
+            "1小時前",
+            "1小時前",
+            "2小時前"
     };
 
     String[] news_description = new String[]{
-            "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description",
-            "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description", "Android ListView Short Description",
+            "車路士負曼聯一役，莫拉達的入球被判越位成為車仔未能追平關鍵，車路士領隊干地表示希望英超能使用VAR技術避免誤判。",
+            "曼城3：0爆「廠」捧聯賽盃",
+            "【體路專訊】「NIKE香港五人足球賽2018」上週末一連兩天（24、25日）假土瓜灣遊樂場硬地小型足球場上演分站賽事，五個組別共28支出線隊伍，將於4...",
+            "英超前列大戰，曼聯主場以2：1反勝車路土，一直對big 6死火的紅魔前鋒盧卡古今場貢獻1入球1助功，可謂對近期外間的質疑作出最好反擊。"
     };
 
     @Override
@@ -53,7 +62,7 @@ public class NewsFragment extends FragmentActivity {
 
         List<HashMap<String, String>> aList = new ArrayList<HashMap<String, String>>();
 
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < news_num; i++) {
             HashMap<String, String> hm = new HashMap<String, String>();
             hm.put("news_image", Integer.toString(news_image[i]));
             hm.put("news_title", news_title[i]);

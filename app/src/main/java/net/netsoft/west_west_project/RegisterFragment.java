@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by HCKH on 20/2/18.
@@ -42,6 +43,7 @@ public class RegisterFragment extends FragmentActivity {
         });
         btn_submit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Register Successfully", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
